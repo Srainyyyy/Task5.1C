@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!-- Top Story部分 -->
+    <RelativeLayout
+        android:id="@+id/layout_top_story"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <!-- 标题：Top Story -->
+        <TextView
+            android:id="@+id/text_top_story"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Top Story"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <!-- 水平滚动框，用于滚动新闻图片 -->
+        <HorizontalScrollView
+            android:id="@+id/horizontal_scroll_news_images"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_top_story"
+            android:padding="8dp">
+
+            <!-- 水平滚动的图片容器 -->
+            <LinearLayout
+                android:id="@+id/layout_news_images"
+                android:layout_width="360dp"
+                android:layout_height="150dp"
+                android:orientation="horizontal">
+
+                <!-- 这里放置新闻图片 -->
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/news_image" />
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/news_image" />
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/news_image" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </RelativeLayout>
+
+    <!-- 新闻故事部分 -->
+    <RelativeLayout
+        android:id="@+id/layout_news_stories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_top_story">
+
+        <!-- 标题：News -->
+        <TextView
+            android:id="@+id/text_news"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="News"
+            android:textSize="40sp" />
+
+        <!-- 四个新闻的容器 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_news"
+            android:orientation="vertical">
+
+            <!-- 第一行新闻 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 新闻1 -->
+
+                <LinearLayout
+                    android:id="@+id/content_news1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:src="@drawable/news_image" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="title1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:text="description1" />
+                </LinearLayout>
+
+                <!-- 新闻2 -->
+
+                <LinearLayout
+                    android:id="@+id/content_news2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:src="@drawable/news_image" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="title2" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="71dp"
+                        android:text="description2" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 第二行新闻 -->
+            <LinearLayout
+                android:id="@+id/content_news3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 新闻3 -->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:src="@drawable/news_image" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="title3" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="92dp"
+                        android:text="description3" />
+                </LinearLayout>
+
+                <!-- 新闻4 -->
+
+                <LinearLayout
+                    android:id="@+id/content_news4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:src="@drawable/news_image" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="title4" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="87dp"
+                        android:text="description4" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <!-- Fragment容器 -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@color/white">
+    <!-- 返回按钮 -->
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back" />
+
+    <!-- 新闻图片 -->
+    <ImageView
+        android:id="@+id/image_news"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/news_image" />
+
+    <!-- 新闻标题 -->
+    <TextView
+        android:id="@+id/text_news_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="title"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <!-- 新闻内容 -->
+    <TextView
+        android:id="@+id/text_news_content"
+        android:layout_width="match_parent"
+        android:layout_height="136dp"
+        android:text="content"
+        android:textSize="14sp" />
+
+    <!-- 相关新闻板块 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical">
+
+
+
+        <!-- 相关新闻条目 -->
+        <TextView
+            android:id="@+id/text_related_news_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="related_news"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <!-- 相关新闻信息 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:orientation="vertical">
+
+
+                <!-- 相关新闻简介 -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_related_news"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
